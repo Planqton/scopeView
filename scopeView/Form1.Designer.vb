@@ -33,12 +33,12 @@ Partial Class Form1
         Me.btnToolgeStream = New System.Windows.Forms.ToolStripMenuItem()
         Me.btnReset = New System.Windows.Forms.ToolStripMenuItem()
         Me.ResetToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RecordToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.lbFPS = New System.Windows.Forms.ToolStripStatusLabel()
         Me.lbStatus = New System.Windows.Forms.ToolStripStatusLabel()
         Me.pbDrawOverlay = New System.Windows.Forms.PictureBox()
         Me.pbStreamView = New System.Windows.Forms.PictureBox()
-        Me.RecordToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         CType(Me.pbDrawOverlay, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -122,6 +122,12 @@ Partial Class Form1
         Me.ResetToolStripMenuItem.Size = New System.Drawing.Size(47, 23)
         Me.ResetToolStripMenuItem.Text = "Reset"
         '
+        'RecordToolStripMenuItem
+        '
+        Me.RecordToolStripMenuItem.Name = "RecordToolStripMenuItem"
+        Me.RecordToolStripMenuItem.Size = New System.Drawing.Size(56, 23)
+        Me.RecordToolStripMenuItem.Text = "Record"
+        '
         'StatusStrip1
         '
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.lbFPS, Me.lbStatus})
@@ -174,12 +180,6 @@ Partial Class Form1
         Me.pbStreamView.TabIndex = 0
         Me.pbStreamView.TabStop = False
         '
-        'RecordToolStripMenuItem
-        '
-        Me.RecordToolStripMenuItem.Name = "RecordToolStripMenuItem"
-        Me.RecordToolStripMenuItem.Size = New System.Drawing.Size(56, 23)
-        Me.RecordToolStripMenuItem.Text = "Record"
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -191,7 +191,7 @@ Partial Class Form1
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Form1"
-        Me.Text = "scopeView by Vanillaboard"
+        Me.Text = "scopeView by Vanillab"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.StatusStrip1.ResumeLayout(False)
