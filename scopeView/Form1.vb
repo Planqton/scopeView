@@ -152,9 +152,9 @@ Public Class Form1
             ' Bild als PNG speichern
             pbStreamView.Image.Save(filePath, ImageFormat.Png)
 
-            MessageBox.Show("Snapshot erfolgreich gespeichert:" & vbCrLf & filePath)
+            MessageBox.Show("Snapshot saved!:" & vbCrLf & filePath)
         Else
-            MessageBox.Show("Kein Bild erfasst.")
+            MessageBox.Show("No Picture to Capture.")
         End If
     End Sub
 
@@ -196,7 +196,7 @@ Public Class Form1
             btnToolgeStream.Text = "[Stop]"
             btnToolgeStream.ForeColor = Color.Red
         Else
-            MessageBox.Show("Bitte wählen Sie ein Videoaufnahmegerät aus.")
+            MessageBox.Show("Please select Streaming Device.")
         End If
     End Sub
     Private Sub Video_NewFrameReceived(sender As Object, eventArgs As NewFrameEventArgs)
@@ -231,7 +231,7 @@ Public Class Form1
 
     Private Sub OrdnerÖffnenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OrdnerÖffnenToolStripMenuItem.Click
         If Not Directory.Exists(directoryPath) Then
-            MessageBox.Show("Das Verzeichnis existiert nicht." & directoryPath)
+            MessageBox.Show("This Directory doesnt Exist." & directoryPath)
             Return
         End If
         ' Das Verzeichnis öffnen
@@ -354,6 +354,9 @@ Public Class Form1
             lineList.Add(Tuple.Create(linePoints, New Pen(toolColor, toolSize)))
         ElseIf toolIndex = 4 Then ' Pfeil hinzufügen
             arrowList.Add(Tuple.Create(startPoint, endPoint, New Pen(toolColor, toolSize)))
+
+        ElseIf toolIndex = 5 Then
+
         End If
 
         pbDrawOverlay.Image = tempBitmap ' Aktualisiere das Bild
@@ -483,7 +486,7 @@ Public Class Form1
         ' Bild als PNG speichern
         bmp.Save(filePath, ImageFormat.Png)
 
-        MessageBox.Show("Screenshot mit Zeichnungen erfolgreich gespeichert:" & vbCrLf & filePath)
+        MessageBox.Show("Screenshot with Drawing saved!:" & vbCrLf & filePath)
     End Sub
 
     Private Sub DrawGraphicsOnBitmap(g As Graphics)
@@ -542,5 +545,12 @@ Public Class Form1
 
     Private Sub RecordToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RecordToolStripMenuItem.Click
 
+    End Sub
+
+    Private Sub pbDrawOverlay_MouseLeave(sender As Object, e As EventArgs) Handles pbDrawOverlay.MouseLeave
+        tempBitmap.Dispose()
+        pbDrawOverlay.Image = Nothing
+        tempBitmap = New Bitmap(pbDrawOverlay.Width, pbDrawOverlay.Height)
+        pbDrawOverlay.Image = tempBitmap
     End Sub
 End Class

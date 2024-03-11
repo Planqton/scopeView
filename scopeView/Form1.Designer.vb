@@ -59,8 +59,8 @@ Partial Class Form1
         '
         Me.MenüToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SnapshotToolStripMenuItem, Me.SnapshotWSToolStripMenuItem, Me.ToolStripMenuItem1, Me.OrdnerÖffnenToolStripMenuItem})
         Me.MenüToolStripMenuItem.Name = "MenüToolStripMenuItem"
-        Me.MenüToolStripMenuItem.Size = New System.Drawing.Size(91, 28)
-        Me.MenüToolStripMenuItem.Text = "Aufnahme"
+        Me.MenüToolStripMenuItem.Size = New System.Drawing.Size(75, 28)
+        Me.MenüToolStripMenuItem.Text = "Capture"
         '
         'SnapshotToolStripMenuItem
         '
@@ -86,7 +86,7 @@ Partial Class Form1
         Me.OrdnerÖffnenToolStripMenuItem.Name = "OrdnerÖffnenToolStripMenuItem"
         Me.OrdnerÖffnenToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F4
         Me.OrdnerÖffnenToolStripMenuItem.Size = New System.Drawing.Size(264, 26)
-        Me.OrdnerÖffnenToolStripMenuItem.Text = "Ordner Öffnen"
+        Me.OrdnerÖffnenToolStripMenuItem.Text = "Open Folder"
         '
         'cbStreamDevices
         '
@@ -113,8 +113,8 @@ Partial Class Form1
         '
         Me.btnReset.Name = "btnReset"
         Me.btnReset.ShortcutKeys = System.Windows.Forms.Keys.F3
-        Me.btnReset.Size = New System.Drawing.Size(88, 28)
-        Me.btnReset.Text = "Werkzeug"
+        Me.btnReset.Size = New System.Drawing.Size(52, 28)
+        Me.btnReset.Text = "Tool"
         '
         'ResetToolStripMenuItem
         '
@@ -125,6 +125,7 @@ Partial Class Form1
         '
         'RecordToolStripMenuItem
         '
+        Me.RecordToolStripMenuItem.Enabled = False
         Me.RecordToolStripMenuItem.Name = "RecordToolStripMenuItem"
         Me.RecordToolStripMenuItem.Size = New System.Drawing.Size(70, 28)
         Me.RecordToolStripMenuItem.Text = "Record"
@@ -167,7 +168,7 @@ Partial Class Form1
         Me.pbDrawOverlay.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.pbDrawOverlay.Dock = System.Windows.Forms.DockStyle.Fill
         Me.pbDrawOverlay.Location = New System.Drawing.Point(0, 32)
-        Me.pbDrawOverlay.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.pbDrawOverlay.Margin = New System.Windows.Forms.Padding(4)
         Me.pbDrawOverlay.Name = "pbDrawOverlay"
         Me.pbDrawOverlay.Size = New System.Drawing.Size(1499, 545)
         Me.pbDrawOverlay.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -178,7 +179,7 @@ Partial Class Form1
         '
         Me.pbStreamView.Dock = System.Windows.Forms.DockStyle.Fill
         Me.pbStreamView.Location = New System.Drawing.Point(0, 32)
-        Me.pbStreamView.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.pbStreamView.Margin = New System.Windows.Forms.Padding(4)
         Me.pbStreamView.Name = "pbStreamView"
         Me.pbStreamView.Size = New System.Drawing.Size(1499, 575)
         Me.pbStreamView.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -195,7 +196,7 @@ Partial Class Form1
         Me.Controls.Add(Me.pbStreamView)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Form1"
         Me.Text = "scopeView by Vanillaboard"
         Me.MenuStrip1.ResumeLayout(False)

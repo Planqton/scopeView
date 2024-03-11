@@ -51,26 +51,29 @@ Partial Class drawToolForm
         'ColorSelectL
         '
         Me.ColorSelectL.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.ColorSelectL.Location = New System.Drawing.Point(12, 12)
+        Me.ColorSelectL.Location = New System.Drawing.Point(16, 15)
+        Me.ColorSelectL.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ColorSelectL.Name = "ColorSelectL"
-        Me.ColorSelectL.Size = New System.Drawing.Size(34, 57)
+        Me.ColorSelectL.Size = New System.Drawing.Size(45, 70)
         Me.ColorSelectL.TabIndex = 23
         Me.ColorSelectL.UseVisualStyleBackColor = False
         '
         'ColorSelectR
         '
         Me.ColorSelectR.BackColor = System.Drawing.Color.Red
-        Me.ColorSelectR.Location = New System.Drawing.Point(44, 12)
+        Me.ColorSelectR.Location = New System.Drawing.Point(59, 15)
+        Me.ColorSelectR.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ColorSelectR.Name = "ColorSelectR"
-        Me.ColorSelectR.Size = New System.Drawing.Size(34, 57)
+        Me.ColorSelectR.Size = New System.Drawing.Size(45, 70)
         Me.ColorSelectR.TabIndex = 24
         Me.ColorSelectR.UseVisualStyleBackColor = False
         '
         'nudSize
         '
-        Me.nudSize.Location = New System.Drawing.Point(12, 102)
+        Me.nudSize.Location = New System.Drawing.Point(16, 126)
+        Me.nudSize.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.nudSize.Name = "nudSize"
-        Me.nudSize.Size = New System.Drawing.Size(192, 20)
+        Me.nudSize.Size = New System.Drawing.Size(256, 22)
         Me.nudSize.TabIndex = 26
         Me.nudSize.Value = New Decimal(New Integer() {5, 0, 0, 0})
         '
@@ -79,53 +82,58 @@ Partial Class drawToolForm
         Me.cbTool.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbTool.FormattingEnabled = True
         Me.cbTool.Items.AddRange(New Object() {"Rectangle", "Circle", "Line", "Brush", "Pfeil", "Text"})
-        Me.cbTool.Location = New System.Drawing.Point(12, 75)
+        Me.cbTool.Location = New System.Drawing.Point(16, 92)
+        Me.cbTool.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cbTool.Name = "cbTool"
-        Me.cbTool.Size = New System.Drawing.Size(192, 21)
+        Me.cbTool.Size = New System.Drawing.Size(255, 24)
         Me.cbTool.TabIndex = 27
         '
         'btnSnapshot
         '
         Me.btnSnapshot.Enabled = False
-        Me.btnSnapshot.Location = New System.Drawing.Point(84, 12)
+        Me.btnSnapshot.Location = New System.Drawing.Point(112, 15)
+        Me.btnSnapshot.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnSnapshot.Name = "btnSnapshot"
-        Me.btnSnapshot.Size = New System.Drawing.Size(120, 57)
+        Me.btnSnapshot.Size = New System.Drawing.Size(160, 70)
         Me.btnSnapshot.TabIndex = 28
         Me.btnSnapshot.Text = "Snapshot"
         Me.btnSnapshot.UseVisualStyleBackColor = True
         '
         'tbText
         '
-        Me.tbText.Location = New System.Drawing.Point(12, 128)
+        Me.tbText.Location = New System.Drawing.Point(16, 158)
+        Me.tbText.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.tbText.Name = "tbText"
-        Me.tbText.Size = New System.Drawing.Size(192, 20)
+        Me.tbText.Size = New System.Drawing.Size(255, 22)
         Me.tbText.TabIndex = 30
-        Me.tbText.Text = "Beispieltext"
+        Me.tbText.Text = "Text"
         '
         'lbText
         '
         Me.lbText.AutoSize = True
-        Me.lbText.Location = New System.Drawing.Point(12, 151)
+        Me.lbText.Location = New System.Drawing.Point(13, 198)
+        Me.lbText.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbText.Name = "lbText"
-        Me.lbText.Size = New System.Drawing.Size(43, 13)
+        Me.lbText.Size = New System.Drawing.Size(83, 16)
         Me.lbText.TabIndex = 31
-        Me.lbText.Text = "Beispiel"
+        Me.lbText.Text = "Sample Text"
         '
         'rstButton
         '
-        Me.rstButton.Location = New System.Drawing.Point(161, 154)
+        Me.rstButton.Location = New System.Drawing.Point(215, 198)
+        Me.rstButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.rstButton.Name = "rstButton"
-        Me.rstButton.Size = New System.Drawing.Size(43, 23)
+        Me.rstButton.Size = New System.Drawing.Size(57, 28)
         Me.rstButton.TabIndex = 32
-        Me.rstButton.Text = "RST"
+        Me.rstButton.Text = "Default"
         Me.rstButton.UseVisualStyleBackColor = True
         '
         'drawToolForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.ClientSize = New System.Drawing.Size(216, 189)
+        Me.ClientSize = New System.Drawing.Size(288, 233)
         Me.Controls.Add(Me.rstButton)
         Me.Controls.Add(Me.lbText)
         Me.Controls.Add(Me.tbText)
@@ -135,11 +143,12 @@ Partial Class drawToolForm
         Me.Controls.Add(Me.ColorSelectR)
         Me.Controls.Add(Me.ColorSelectL)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "drawToolForm"
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
-        Me.Text = "drawToolForm"
+        Me.Text = "Toolsetting"
         CType(Me.nudSize, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
