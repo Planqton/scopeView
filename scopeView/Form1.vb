@@ -57,6 +57,7 @@ Public Class Form1
     Public drawtextFont As Font
 
 
+
     Public Sub New()
         InitializeComponent()
         InitializePictureBox()
@@ -286,6 +287,7 @@ Public Class Form1
 
     Private Sub pbDrawOverlay_MouseMove(sender As Object, e As MouseEventArgs) Handles pbDrawOverlay.MouseMove
         Dim g As Graphics = Graphics.FromImage(tempBitmap)
+        pbDrawOverlay.Cursor = Cursors.Arrow
 
         If isDrawing Then
 
@@ -323,6 +325,10 @@ Public Class Form1
         End If
 
         If toolIndex = 5 Then
+            pbDrawOverlay.Cursor = Cursors.IBeam
+
+
+
             g.Clear(Color.Transparent)
             Dim font As Font = drawtextFont
             Dim brush As New SolidBrush(toolColor)
@@ -462,7 +468,7 @@ Public Class Form1
     Private Sub ResetToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ResetToolStripMenuItem.Click
         refreshDrawOverlay()
     End Sub
-    Private Sub SaveScreenshotWithDrawings()
+    Public Sub SaveScreenshotWithDrawings()
         ' Erstellen Sie eine Kopie des aktuellen Inhalts der pbDrawOverlay-PictureBox
         Dim bmp As New Bitmap(pbDrawOverlay.ClientSize.Width, pbDrawOverlay.ClientSize.Height)
         pbDrawOverlay.DrawToBitmap(bmp, pbDrawOverlay.ClientRectangle)

@@ -90,7 +90,6 @@ Partial Class drawToolForm
         '
         'btnSnapshot
         '
-        Me.btnSnapshot.Enabled = False
         Me.btnSnapshot.Location = New System.Drawing.Point(112, 15)
         Me.btnSnapshot.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnSnapshot.Name = "btnSnapshot"

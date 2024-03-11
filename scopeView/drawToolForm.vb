@@ -57,6 +57,11 @@ Public Class drawToolForm
 
     Private Sub rstButton_Click(sender As Object, e As EventArgs) Handles rstButton.Click
         cbTool.SelectedIndex = 0
-        Form1.pbDrawOverlay.Image = Form1.tempBitmap
+        nudSize.Value = 5
+        tbText.Text = "Text"
+    End Sub
+
+    Private Sub btnSnapshot_Click(sender As Object, e As EventArgs) Handles btnSnapshot.Click
+        Form1.SaveScreenshotWithDrawings()
     End Sub
 End Class
