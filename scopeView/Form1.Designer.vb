@@ -34,6 +34,7 @@ Partial Class Form1
         Me.btnReset = New System.Windows.Forms.ToolStripMenuItem()
         Me.ResetToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RecordToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.btnToolgePause = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.lbFPS = New System.Windows.Forms.ToolStripStatusLabel()
         Me.lbStatus = New System.Windows.Forms.ToolStripStatusLabel()
@@ -48,10 +49,11 @@ Partial Class Form1
         'MenuStrip1
         '
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenüToolStripMenuItem, Me.cbStreamDevices, Me.RefreshToolStripMenuItem, Me.btnToolgeStream, Me.btnReset, Me.ResetToolStripMenuItem, Me.RecordToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenüToolStripMenuItem, Me.cbStreamDevices, Me.RefreshToolStripMenuItem, Me.btnToolgeStream, Me.btnReset, Me.ResetToolStripMenuItem, Me.RecordToolStripMenuItem, Me.btnToolgePause})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(1499, 32)
+        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(4, 2, 0, 2)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1124, 27)
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -59,33 +61,33 @@ Partial Class Form1
         '
         Me.MenüToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SnapshotToolStripMenuItem, Me.SnapshotWSToolStripMenuItem, Me.ToolStripMenuItem1, Me.OrdnerÖffnenToolStripMenuItem})
         Me.MenüToolStripMenuItem.Name = "MenüToolStripMenuItem"
-        Me.MenüToolStripMenuItem.Size = New System.Drawing.Size(75, 28)
+        Me.MenüToolStripMenuItem.Size = New System.Drawing.Size(61, 23)
         Me.MenüToolStripMenuItem.Text = "Capture"
         '
         'SnapshotToolStripMenuItem
         '
         Me.SnapshotToolStripMenuItem.Name = "SnapshotToolStripMenuItem"
         Me.SnapshotToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1
-        Me.SnapshotToolStripMenuItem.Size = New System.Drawing.Size(264, 26)
+        Me.SnapshotToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
         Me.SnapshotToolStripMenuItem.Text = "Snapshot"
         '
         'SnapshotWSToolStripMenuItem
         '
         Me.SnapshotWSToolStripMenuItem.Name = "SnapshotWSToolStripMenuItem"
         Me.SnapshotWSToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F2
-        Me.SnapshotWSToolStripMenuItem.Size = New System.Drawing.Size(264, 26)
+        Me.SnapshotWSToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
         Me.SnapshotWSToolStripMenuItem.Text = "Snapshot (with Shape)"
         '
         'ToolStripMenuItem1
         '
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(261, 6)
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(208, 6)
         '
         'OrdnerÖffnenToolStripMenuItem
         '
         Me.OrdnerÖffnenToolStripMenuItem.Name = "OrdnerÖffnenToolStripMenuItem"
         Me.OrdnerÖffnenToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F4
-        Me.OrdnerÖffnenToolStripMenuItem.Size = New System.Drawing.Size(264, 26)
+        Me.OrdnerÖffnenToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
         Me.OrdnerÖffnenToolStripMenuItem.Text = "Open Folder"
         '
         'cbStreamDevices
@@ -93,51 +95,57 @@ Partial Class Form1
         Me.cbStreamDevices.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
         Me.cbStreamDevices.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbStreamDevices.Name = "cbStreamDevices"
-        Me.cbStreamDevices.Size = New System.Drawing.Size(265, 28)
+        Me.cbStreamDevices.Size = New System.Drawing.Size(200, 23)
         '
         'RefreshToolStripMenuItem
         '
         Me.RefreshToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
         Me.RefreshToolStripMenuItem.Name = "RefreshToolStripMenuItem"
-        Me.RefreshToolStripMenuItem.Size = New System.Drawing.Size(72, 28)
+        Me.RefreshToolStripMenuItem.Size = New System.Drawing.Size(58, 23)
         Me.RefreshToolStripMenuItem.Text = "Refresh"
         '
         'btnToolgeStream
         '
         Me.btnToolgeStream.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
         Me.btnToolgeStream.Name = "btnToolgeStream"
-        Me.btnToolgeStream.Size = New System.Drawing.Size(64, 28)
+        Me.btnToolgeStream.Size = New System.Drawing.Size(51, 23)
         Me.btnToolgeStream.Text = "[Start]"
         '
         'btnReset
         '
         Me.btnReset.Name = "btnReset"
         Me.btnReset.ShortcutKeys = System.Windows.Forms.Keys.F3
-        Me.btnReset.Size = New System.Drawing.Size(52, 28)
+        Me.btnReset.Size = New System.Drawing.Size(41, 23)
         Me.btnReset.Text = "Tool"
         '
         'ResetToolStripMenuItem
         '
         Me.ResetToolStripMenuItem.Name = "ResetToolStripMenuItem"
         Me.ResetToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.Delete
-        Me.ResetToolStripMenuItem.Size = New System.Drawing.Size(59, 28)
+        Me.ResetToolStripMenuItem.Size = New System.Drawing.Size(47, 23)
         Me.ResetToolStripMenuItem.Text = "Reset"
         '
         'RecordToolStripMenuItem
         '
         Me.RecordToolStripMenuItem.Enabled = False
         Me.RecordToolStripMenuItem.Name = "RecordToolStripMenuItem"
-        Me.RecordToolStripMenuItem.Size = New System.Drawing.Size(70, 28)
+        Me.RecordToolStripMenuItem.Size = New System.Drawing.Size(56, 23)
         Me.RecordToolStripMenuItem.Text = "Record"
+        '
+        'btnToolgePause
+        '
+        Me.btnToolgePause.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.btnToolgePause.Name = "btnToolgePause"
+        Me.btnToolgePause.Size = New System.Drawing.Size(50, 23)
+        Me.btnToolgePause.Text = "Pause"
         '
         'StatusStrip1
         '
         Me.StatusStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.lbFPS, Me.lbStatus})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 577)
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 469)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Padding = New System.Windows.Forms.Padding(1, 0, 19, 0)
-        Me.StatusStrip1.Size = New System.Drawing.Size(1499, 30)
+        Me.StatusStrip1.Size = New System.Drawing.Size(1124, 24)
         Me.StatusStrip1.TabIndex = 2
         Me.StatusStrip1.Text = "StatusStrip1"
         '
@@ -149,7 +157,7 @@ Partial Class Form1
             Or System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom), System.Windows.Forms.ToolStripStatusLabelBorderSides)
         Me.lbFPS.BorderStyle = System.Windows.Forms.Border3DStyle.Etched
         Me.lbFPS.Name = "lbFPS"
-        Me.lbFPS.Size = New System.Drawing.Size(51, 24)
+        Me.lbFPS.Size = New System.Drawing.Size(42, 19)
         Me.lbFPS.Text = "FPS: 0"
         '
         'lbStatus
@@ -160,17 +168,16 @@ Partial Class Form1
             Or System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom), System.Windows.Forms.ToolStripStatusLabelBorderSides)
         Me.lbStatus.BorderStyle = System.Windows.Forms.Border3DStyle.Etched
         Me.lbStatus.Name = "lbStatus"
-        Me.lbStatus.Size = New System.Drawing.Size(70, 24)
+        Me.lbStatus.Size = New System.Drawing.Size(55, 19)
         Me.lbStatus.Text = "Stopped"
         '
         'pbDrawOverlay
         '
         Me.pbDrawOverlay.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.pbDrawOverlay.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pbDrawOverlay.Location = New System.Drawing.Point(0, 32)
-        Me.pbDrawOverlay.Margin = New System.Windows.Forms.Padding(4)
+        Me.pbDrawOverlay.Location = New System.Drawing.Point(0, 27)
         Me.pbDrawOverlay.Name = "pbDrawOverlay"
-        Me.pbDrawOverlay.Size = New System.Drawing.Size(1499, 545)
+        Me.pbDrawOverlay.Size = New System.Drawing.Size(1124, 442)
         Me.pbDrawOverlay.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.pbDrawOverlay.TabIndex = 3
         Me.pbDrawOverlay.TabStop = False
@@ -178,25 +185,23 @@ Partial Class Form1
         'pbStreamView
         '
         Me.pbStreamView.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pbStreamView.Location = New System.Drawing.Point(0, 32)
-        Me.pbStreamView.Margin = New System.Windows.Forms.Padding(4)
+        Me.pbStreamView.Location = New System.Drawing.Point(0, 27)
         Me.pbStreamView.Name = "pbStreamView"
-        Me.pbStreamView.Size = New System.Drawing.Size(1499, 575)
+        Me.pbStreamView.Size = New System.Drawing.Size(1124, 466)
         Me.pbStreamView.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.pbStreamView.TabIndex = 0
         Me.pbStreamView.TabStop = False
         '
         'Form1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1499, 607)
+        Me.ClientSize = New System.Drawing.Size(1124, 493)
         Me.Controls.Add(Me.pbDrawOverlay)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.pbStreamView)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Form1"
         Me.Text = "scopeView by Vanillaboard"
         Me.MenuStrip1.ResumeLayout(False)
@@ -227,4 +232,5 @@ Partial Class Form1
     Friend WithEvents btnReset As ToolStripMenuItem
     Friend WithEvents ResetToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RecordToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents btnToolgePause As ToolStripMenuItem
 End Class

@@ -131,9 +131,11 @@ Public Class Form1
             pauseState = True
             lbFPS.Text = "FPS: 0"
             lbStatus.Text = "Pause"
+            btnToolgePause.Text = "Go"
         Else
             pauseState = False
             lbStatus.Text = "Streaming"
+            btnToolgePause.Text = "Pause"
         End If
     End Sub
 
@@ -201,12 +203,16 @@ Public Class Form1
         End If
     End Sub
     Private Sub Video_NewFrameReceived(sender As Object, eventArgs As NewFrameEventArgs)
-        ' Zeige das neue Bild in der PictureBox an
-        pbStreamView.Image = DirectCast(eventArgs.Frame.Clone(), Bitmap)
-        ThreadPool.QueueUserWorkItem(Sub(state)
-                                         FrameCounter()
-                                     End Sub)
-        lbStatus.Text = "Viewing"
+        If pauseState = True Then
+            lbStatus.Text = "Pause"
+        ElseIf pauseState = False Then
+            ' Zeige das neue Bild in der PictureBox an
+            pbStreamView.Image = DirectCast(eventArgs.Frame.Clone(), Bitmap)
+            ThreadPool.QueueUserWorkItem(Sub(state)
+                                             FrameCounter()
+                                         End Sub)
+            lbStatus.Text = "Viewing"
+        End If
     End Sub
 
 
@@ -535,9 +541,6 @@ Public Class Form1
     Private Sub SnapshotToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SnapshotToolStripMenuItem.Click
         SnapShot()
     End Sub
-    Private Sub pbDrawOverlay_Click(sender As Object, e As EventArgs) Handles pbDrawOverlay.Click
-
-    End Sub
 
 
 
@@ -558,5 +561,10 @@ Public Class Form1
         pbDrawOverlay.Image = Nothing
         tempBitmap = New Bitmap(pbDrawOverlay.Width, pbDrawOverlay.Height)
         pbDrawOverlay.Image = tempBitmap
+    End Sub
+
+    Private Sub PauseToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles btnToolgePause.Click
+        TogglePause()
+
     End Sub
 End Class
