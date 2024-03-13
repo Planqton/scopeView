@@ -8,6 +8,8 @@ This project is a Windows Forms application written in VB.NET. It provides funct
 - [Features](#features)
 - [Usage](#usage)
 - [Installation](#installation)
+- [Known Bugs](#known-bugs)
+- [Planned](#planned)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -20,7 +22,6 @@ This project is a Windows Forms application written in VB.NET. It provides funct
 - Stream video from capture devices.
 - Draw shapes, lines, arrows, and text on the video stream.
 - Capture snapshots with drawings.
-- Record the video stream.
 - Pause and resume video streaming.
 
 ## Usage
@@ -39,6 +40,14 @@ This project is a Windows Forms application written in VB.NET. It provides funct
 2. Open the project in Visual Studio.
 3. Build the project.
 4. Run the application.
+
+## Known Bugs
+
+- When drawing with the brush tool, the drawing would be deleted.
+
+## Planned
+
+- Recording Function with AVI output.
 
 ## Contributing
 
